@@ -1,0 +1,11 @@
+---
+applications:
+  - name: config-server
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
+    instances: 1
+    random-route: true
+    path: target/config-server.jar
+
+    env:
+      DEBUG: true
+      SPRING_PROFILES_ACTIVE: cloud
